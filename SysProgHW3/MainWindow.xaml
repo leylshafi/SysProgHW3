@@ -1,0 +1,39 @@
+﻿<Window x:Class="SysProgHW3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="btnFile" Width="100" Height="30" FontSize="20" Click="btnFile_Click">File...</Button>
+            <TextBox x:Name="filePath" Margin="30 0" Width="600" IsReadOnly="True"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock FontSize="20">Password</TextBlock>
+            <PasswordBox x:Name="password" Margin="30 0" Width="300" ></PasswordBox>
+            <RadioButton x:Name="btnEnc" FontSize="20"  Margin="30 0" >Encrypt</RadioButton>
+            <RadioButton x:Name="btnDec" FontSize="20"  Margin="30 0">Decrypt</RadioButton>
+        </StackPanel>
+        <StackPanel Grid.Row="2"  Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <ProgressBar x:Name="progress" Width="700" Height="30"></ProgressBar>
+        </StackPanel>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition  Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <Button x:Name="btnStart"  Width="100" Height="30" FontSize="20" Click="btnStart_Click" >Start</Button>
+                <Button x:Name="btnCancel"  Width="100" Height="30" FontSize="20" Margin="30 0" Click="btnCancel_Click">Cancel</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
